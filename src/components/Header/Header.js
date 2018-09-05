@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Header extends Component {
     render() {
         return (
-            <header>
+            <header className="header" style={{backgroundImage: `url(${require('../../assets/images/banner.jpg')})`}}>
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-12">

@@ -147,12 +147,12 @@ export const teams = [
         ]
     },
     {
-        id: "the-legendary-super-saiyan",
-        name: "The Legendary Super Saiyan",
+        id: "broly-the-legendary-super-saiyan",
+        name: "Broly: The Legendary Super Saiyan",
         type: "movie",
         fighters: [
-            "ssb-goku",
-            "ssb-vegeta",
+            "ssj-goku",
+            "ssj-vegeta",
             "trunks",
             "teen-gohan",
             "broly"

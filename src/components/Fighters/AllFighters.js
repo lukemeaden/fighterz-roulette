@@ -10,7 +10,7 @@ class AllFighters extends Component {
                 { fighters.map((fighter, i) => {
                     if (!fighter.live) return null;
                     return (
-                        <li key={i} className="all-fighters__item">
+                        <li key={i} className="all-fighters__item list-unstyled">
                             <FighterCard fighter={fighter} col={col} />
                         </li>
                     )

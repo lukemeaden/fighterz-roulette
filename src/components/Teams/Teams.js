@@ -36,34 +36,39 @@ class Teams extends Component {
     }
 
     render() {
+        const { col } = this.props;
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-xs-12">
-                        <select onChange={this.onChange}>
-                            { this.state.teams.map((team, i) => {
-                                return <option value={team.id} key={i}>{team.name}</option>
-                            }) }
-                        </select>
+            <div className="teams">
+                <div className="container">
+                    <div className="row">
+                        <form>
+                            <div className="col-xs-12 form-group">
+                                <label for="team-select"><h2>Try picking a themed team:</h2></label>
+                                <select id="team-select" className="form-control" onChange={this.onChange}>
+                                    { this.state.teams.map((team, i) => {
+                                        return <option value={team.id} key={i}>{team.name}</option>
+                                    }) }
+                                </select>
+                            </div>
+                        </form>
                     </div>
-                </div>
-                { this.state.teams.map((team, i) => {
-                    if (this.state.activeTeam === team.id) return (
-                        <div key={team.id} ref={team.id}>
-                            <div className="container" className="row">
-                                <div className="col-xs-12">
-                                    <h2>{ team.name }</h2>
+                    { this.state.teams.map((team, i) => {
+                        if (this.state.activeTeam === team.id) return (
+                            <div key={team.id} ref={team.id}>
+                                <div className="container" className="row">
+                                    <div className="col-xs-12">
+                                        <h2>{ team.name }</h2>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <AllFighters fighters={team.fighters} col={col} />
                                 </div>
                             </div>
-                            <div className="row">
-                                <AllFighters fighters={team.fighters} col={{xs: '4', sm: '2'}} />
-                            </div>
-                        </div>
-                    )
-                }) }
+                        )
+                    }) }
+                </div>
             </div>
         )
-        return
     }
 }
 

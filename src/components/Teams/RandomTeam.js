@@ -16,16 +16,27 @@ class RandomTeam extends Component {
         const assistFighters = this.findFightersByPosition('assist');
         const anchorFighters = this.findFightersByPosition('anchor');
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-xs-12">
-                        <h2>Your random team by position</h2>
+            <div className="random-team">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xs-12">
+                            <h2>Your random team by position</h2>
+                        </div>
                     </div>
-                </div>
-                <div className="row">
-                    <RandomFighter key="point" fighters={pointFighters} col={col} textAlign={textAlign} />
-                    <RandomFighter key="assist" fighters={assistFighters} col={col} textAlign={textAlign} />
-                    <RandomFighter key="anchor" fighters={anchorFighters} col={col} textAlign={textAlign} />
+                    <div className="row">
+                        <div className="col-xs-4">
+                            <h4>Point</h4>
+                            <RandomFighter key="point" fighters={pointFighters} textAlign={textAlign} />
+                        </div>
+                        <div className="col-xs-4">
+                            <h4>Assist</h4>
+                            <RandomFighter key="assist" fighters={assistFighters} textAlign={textAlign} />
+                        </div>
+                        <div className="col-xs-4">
+                            <h4>Anchor</h4>
+                            <RandomFighter key="anchor" fighters={anchorFighters} textAlign={textAlign} />
+                        </div>
+                    </div>
                 </div>
             </div>
         )

@@ -23,8 +23,8 @@ class FighterCard extends Component {
         return (
             <div className={cardClasses}>
                 <h3 className="fighter-card__name">{fighter.name}</h3>
-                <img src={require(`../../assets/images/fighters/${fighter.id}.png`)} />
-                <table className="fighter-card__table">
+                <img src={require(`../../assets/images/fighters/${fighter.id}.png`)} className="fighter-card__image" />
+                <table className="fighter-card__table table table-striped">
                     <tbody>
                         <tr>
                             <th>Tier:</th>
