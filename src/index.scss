@@ -1,0 +1,10 @@
+/**  **/
+@import './assets/scss/html-reset.scss';
+@import './assets/scss/images.scss';
+@import './assets/scss/typography.scss';
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-grid-only@1.0.0/bootstrap.css');
+
+/** Components **/
+@import './components/AppWrapper/scss/AppWrapper.scss';
+@import './components/Header/scss/Header.scss';
+@import './components/Fighters/scss/_Fighters.scss';
