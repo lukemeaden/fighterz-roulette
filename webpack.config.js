@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -40,6 +41,10 @@ const config = {
         hints: false
     },
     plugins: [
+        new CopyWebpackPlugin([{
+            from: './src/route-files',
+            to: path.resolve('./docs')
+        }]),
         new HtmlWebPackPlugin({
             template: './src/view/index.html',
             filename: './index.html'

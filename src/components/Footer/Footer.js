@@ -10,7 +10,7 @@ class Footer extends Component {
                             <p>FighterZ Roulette</p>
                         </div>
                         <div className="col-xs-6">
-                            <p className="text-align-right">Created by Luke Meaden</p>
+                            <p className="text-align-right">Created by <a href="https://github.com/lukemeaden">Luke Meaden</a></p>
                         </div>
                     </div>
                 </div>
