@@ -1,4 +1,5 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -41,6 +42,7 @@ const config = {
         hints: false
     },
     plugins: [
+        new CleanWebpackPlugin(path.resolve('./docs')),
         new CopyWebpackPlugin([{
             from: './src/route-files',
             to: path.resolve('./docs')
