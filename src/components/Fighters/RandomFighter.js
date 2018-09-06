@@ -4,9 +4,9 @@ import FighterCard from './FighterCard';
 class RandomFighter extends Component {
 
     render() {
-        const { col, fighters, textAlign } = this.props;
+        const { col, fighters, hasPosition, textAlign } = this.props;
         const rng = Math.floor(Math.random() * fighters.length) + 0;
-        return <FighterCard fighter={fighters[rng]} col={col} textAlign={textAlign} />
+        return <FighterCard fighter={fighters[rng]} col={col} textAlign={textAlign} hasPosition={hasPosition} />
     }
 }
 

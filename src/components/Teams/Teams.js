@@ -52,12 +52,12 @@ class Teams extends Component {
                     </div>
                     { this.state.teams.map((team, i) => {
                         if (this.state.activeTeam === team.id) return (
-                            <div className="row">
+                            <div className="row" key={team.id}>
                                 <div className="col col-xs-12">
                                     <h2>{ team.name }</h2>
                                 </div>
                             </div>,
-                            <div className="row align-items-end">
+                            <div className="row align-items-end" key={i}>
                                 <AllFighters fighters={team.fighters} col={col} />
                             </div>
                         )
