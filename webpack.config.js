@@ -63,7 +63,7 @@ module.exports = (env, argv) => {
             mode: 'development',
             ...config,
             output: {
-                path: path.resolve('./dist'),
+                path: path.resolve('./docs'),
                 filename: '[name].js'
             }
         }
