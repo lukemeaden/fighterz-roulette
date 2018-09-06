@@ -1,3 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css);
+/**  **/
+img {
+  max-width: 100%; }
+
+table tr th {
+  font-weight: bold; }
+
+html, body {
+  font-family: 'Open Sans', sans-serif; }
+
+h1, h2, h3, h4, h5, h6, p {
+  padding-bottom: 10px; }
+
+.text-align-left {
+  text-align: left; }
+
+.text-align-center {
+  text-align: center; }
+  .text-align-center table {
+    margin: 0 auto; }
+
+.text-align-right {
+  text-align: right; }
+
 /** Components **/
-body {
-  background: red; }
+.header {
+  background-position: center;
+  background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  .header h1 {
+    color: #ffffff; }
+
+.footer {
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #f5f5f5; }
+
+.list-all-fighters {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9f9f9+0,ffffff+98 */
+  background: #f9f9f9;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f9f9f9 0%, #ffffff 98%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f9f9f9 0%, #ffffff 98%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f9f9f9 0%, #ffffff 98%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.fighter-card__image {
+  padding-bottom: 10px; }
+
+.random-team {
+  background-color: #f6f5f7;
+  box-shadow: inset 0px -40px 120px #e4ebf3;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.teams {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
