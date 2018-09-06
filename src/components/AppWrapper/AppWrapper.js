@@ -9,17 +9,16 @@ import RandomTeam from '../Teams/RandomTeam';
 import Teams from '../Teams/Teams';
 
 class AppWrapper extends Component {
+
     render() {
+        const filterLiveFighters = fighters.filter((fighter, i) => fighter.live);
+
         return (
             <div className="app-wrapper">
                 <Header />
-                <RandomTeam fighters={fighters} col={{xs: '4', sm: '4'}} textAlign="center" />
-                <div className="container">
-                    <div className="row">
-                        <Teams teams={teams} fighters={fighters} col={{xs: '4', sm: '3'}} textAlign="center" />
-                    </div>
-                </div>
-                <ListAllFighters fighters={fighters} col={{xs: '4', sm: '3'}} />
+                <RandomTeam fighters={filterLiveFighters} col={{xs: '4', sm: '4'}} textAlign="center" />
+                <Teams teams={teams} fighters={filterLiveFighters} col={{xs: '4', sm: '4'}} textAlign="center" />
+                <ListAllFighters fighters={filterLiveFighters} col={{xs: '4', sm: '3'}} />
                 <Footer />
             </div>
         );

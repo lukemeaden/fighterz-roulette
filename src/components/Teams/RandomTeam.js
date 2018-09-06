@@ -10,6 +10,10 @@ class RandomTeam extends Component {
         })
     }
 
+    handleClick = () => {
+        this.forceUpdate();
+    }
+
     render() {
         const { col, fighters, textAlign } = this.props;
         const pointFighters = this.findFightersByPosition('point');
@@ -19,22 +23,18 @@ class RandomTeam extends Component {
             <div className="random-team">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xs-12">
+                        <div className="col col-xs-12">
                             <h2>Your random team by position</h2>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-xs-4">
-                            <h4>Point</h4>
-                            <RandomFighter key="point" fighters={pointFighters} textAlign={textAlign} />
-                        </div>
-                        <div className="col-xs-4">
-                            <h4>Assist</h4>
-                            <RandomFighter key="assist" fighters={assistFighters} textAlign={textAlign} />
-                        </div>
-                        <div className="col-xs-4">
-                            <h4>Anchor</h4>
-                            <RandomFighter key="anchor" fighters={anchorFighters} textAlign={textAlign} />
+                    <div className="row align-items-end">
+                        <RandomFighter key="point" col={col} fighters={pointFighters} textAlign={textAlign} hasPosition="Point" />
+                        <RandomFighter key="assist" col={col} fighters={assistFighters} textAlign={textAlign} hasPosition="Assist" />
+                        <RandomFighter key="anchor" col={col} fighters={anchorFighters} textAlign={textAlign} hasPosition="Anchor" />
+                    </div>
+                    <div className="row random-team__button-row">
+                        <div className="col col-xs-12">
+                            <button className="btn btn-primary btn-block" onClick={this.handleClick}>Roll again</button>
                         </div>
                     </div>
                 </div>

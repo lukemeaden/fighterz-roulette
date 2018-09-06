@@ -269,4 +269,13 @@ export const fighters = [
         anchor: true,
         tier: "S"
     },
+    {
+        id: "cooler",
+        name: "Cooler",
+        live: false,
+        point: true,
+        assist: false,
+        anchor: true,
+        tier: "S"
+    },
 ]

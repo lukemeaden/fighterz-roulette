@@ -8,7 +8,7 @@ class ListAllFighters extends Component {
         return (
             <div className="list-all-fighters">
                 <div className="container">
-                    <div className="row">
+                    <div className="row align-items-end">
                         <AllFighters fighters={fighters} col={col} />
                     </div>
                 </div>

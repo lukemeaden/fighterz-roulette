@@ -41,28 +41,24 @@ class Teams extends Component {
             <div className="teams">
                 <div className="container">
                     <div className="row">
-                        <form>
-                            <div className="col-xs-12 form-group">
-                                <label for="team-select"><h2>Try picking a themed team:</h2></label>
-                                <select id="team-select" className="form-control" onChange={this.onChange}>
-                                    { this.state.teams.map((team, i) => {
-                                        return <option value={team.id} key={i}>{team.name}</option>
-                                    }) }
-                                </select>
-                            </div>
-                        </form>
+                        <div className="col col-xs-12 form-group">
+                            <label><h2>Try picking a themed team:</h2></label>
+                            <select id="team-select" className="form-control" onChange={this.onChange}>
+                                { this.state.teams.map((team, i) => {
+                                    return <option value={team.id} key={i}>{team.name}</option>
+                                }) }
+                            </select>
+                        </div>
                     </div>
                     { this.state.teams.map((team, i) => {
                         if (this.state.activeTeam === team.id) return (
-                            <div key={team.id} ref={team.id}>
-                                <div className="container" className="row">
-                                    <div className="col-xs-12">
-                                        <h2>{ team.name }</h2>
-                                    </div>
+                            <div className="row">
+                                <div className="col col-xs-12">
+                                    <h2>{ team.name }</h2>
                                 </div>
-                                <div className="row">
-                                    <AllFighters fighters={team.fighters} col={col} />
-                                </div>
+                            </div>,
+                            <div className="row align-items-end">
+                                <AllFighters fighters={team.fighters} col={col} />
                             </div>
                         )
                     }) }

@@ -8,9 +8,10 @@ class FighterCard extends Component {
     }
 
     render() {
-        const { col, fighter, textAlign } = this.props;
+        const { col, fighter, hasPosition, textAlign } = this.props;
 
         const cardClasses = cx({
+            [`col`]: col,
             [`col-xs-${col && col.xs}`]: col && col.xs,
             [`col-sm-${col && col.sm}`]: col && col.sm,
             [`col-md-${col && col.md}`]: col && col.md,
@@ -20,8 +21,10 @@ class FighterCard extends Component {
             [`text-align-${textAlign}`]: textAlign
         });
 
+console.log(hasPosition);
         return (
             <div className={cardClasses}>
+                { hasPosition && `<h4>${hasPosition}</h4>` }
                 <h3 className="fighter-card__name">{fighter.name}</h3>
                 <img src={require(`../../assets/images/fighters/${fighter.id}.png`)} className="fighter-card__image" />
                 <table className="fighter-card__table table table-striped">

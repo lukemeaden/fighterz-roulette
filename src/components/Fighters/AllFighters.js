@@ -5,18 +5,9 @@ class AllFighters extends Component {
 
     render() {
         const { col, fighters } = this.props;
-        return (
-            <ul className="all-fighters">
-                { fighters.map((fighter, i) => {
-                    if (!fighter.live) return null;
-                    return (
-                        <li key={i} className="all-fighters__item list-unstyled">
-                            <FighterCard fighter={fighter} col={col} />
-                        </li>
-                    )
-                }) }
-            </ul>
-        )
+        return fighters.map((fighter, i) => {
+            return <FighterCard key={i} fighter={fighter} col={col} />
+        })
     }
 }
 
