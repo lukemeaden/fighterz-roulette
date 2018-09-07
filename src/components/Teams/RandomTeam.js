@@ -24,7 +24,7 @@ class RandomTeam extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col col-xs-12">
-                            <h2>Your random team by position</h2>
+                            <h2>Dragon Ball Fighterz Random Team Generator <small>(by position!)</small></h2>
                         </div>
                     </div>
                     <div className="row align-items-end">
